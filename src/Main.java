@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -13,8 +15,8 @@ public class Main {
         //Task2
         System.out.println("Задача 2");
         int[] spend = {100, 211, 303, 505, 8};
-        int maxSpend = spend[1];
-        int minSpend = spend[1];
+        int maxSpend = spend[0];
+        int minSpend = spend[0];
         for (int i = 0; i < spend.length; i++) {
             if (spend[i] > maxSpend) {
                 maxSpend = spend[i];
@@ -35,7 +37,14 @@ public class Main {
         //Task4
         System.out.println("Задача 4");
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        for (int i = reverseFullName.length - 1; i >= 0; i--) {
+        //System.out.println(reverseFullName[i]);
+
+        for (int i = 0; i < reverseFullName.length / 2; i++) {
+            char letter = reverseFullName[i];
+            reverseFullName[i] = reverseFullName[reverseFullName.length - (1 + i)];
+            reverseFullName[reverseFullName.length - (1 + i)] = letter;
+        }
+        for (int i = 0; i < reverseFullName.length; i++) {
             System.out.print(reverseFullName[i]);
         }
     }
