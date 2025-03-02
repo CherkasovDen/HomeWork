@@ -42,17 +42,17 @@ public class Main {
     //      method for Task2
     public static void downloadApp(int clientOS, int clientDeviceYear) {
         int currentYear = LocalDate.now().getYear();
-        if (clientOS == 0) {
-            if (clientDeviceYear == currentYear) {
-                System.out.println("Установите версию приложения для iOS по ссылке");
-            } else {
+                if (clientOS == 0) {
+            if (clientDeviceYear < currentYear) {
                 System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+            } else {
+                System.out.println("Установите версию приложения для iOS по ссылке");
             }
         } else if (clientOS == 1) {
-            if (clientDeviceYear == currentYear) {
-                System.out.println("Установите версию приложения для Android по ссылке");
-            } else {
+            if (clientDeviceYear < currentYear) {
                 System.out.println("Установите облегченную версию приложения для Android по ссылке");
+            } else {
+                System.out.println("Установите версию приложения для Android по ссылке");
             }
         }
     }
