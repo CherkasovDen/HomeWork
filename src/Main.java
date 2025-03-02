@@ -15,7 +15,7 @@ public class Main {
         //Task 2
         System.out.println("Задача 2");
         int clientOS = 0;
-        int clientDeviceYear = 2023;
+        int clientDeviceYear = 2024;
         downloadApp(clientOS, clientDeviceYear);
 
 //        Task 3
