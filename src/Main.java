@@ -7,26 +7,34 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Author block = new Author ("Block", "Alex");
-        System.out.println("block.surname = " + block.getSurname());
-        System.out.println("block.name = " + block.getName());
-
-        Author chehov = new Author("Chehov", "Anton");
-        System.out.println("chehov.surname = " + chehov.getSurname());
-        System.out.println("chehov.name = " + chehov.getName());
-
+        Author block = new Author ("Блок", "Александр");
+        Author chehov = new Author("Чехов", "Антон");
 
         Book book1 = new Book("Двенадцать", block, 1918);
-        System.out.println("book1.book = " + book1.getBook());
-        System.out.println("book1.nameOfAuthor = " + book1.getNameOfAuthor());
-        System.out.println("book1.yearOfPublication = " + book1.getYearOfPublication());
-
         Book book2 = new Book("Хамелеон", chehov, 1884);
-        System.out.println("book2.book = " + book2.getBook());
-        System.out.println("book2.nameOfAuthor = " + book2.getNameOfAuthor());
-        System.out.println("book2.yearOfPublication = " + book2.getYearOfPublication());
+        Book book3 = new Book("Крыжовник", chehov, 1898);
+        Book book4 = new Book("Скифы", block, 1918);
 
-        book2.setYearOfPublication(1900);
-        System.out.println("book2.getYearOfPublication = " + book2.getYearOfPublication());
+        System.out.println(book1);
+        System.out.println();
+        System.out.println(book2);
+        System.out.println();
+        System.out.println(book3);
+        System.out.println();
+        System.out.println(book4);
+        System.out.println();
+
+        book4.setYearOfPublication(1900);
+        System.out.println("book4.getYearOfPublication() = " + book4.getYearOfPublication());
+
+        System.out.println(chehov.hashCode());
+        System.out.println(block.hashCode());
+
+        System.out.println(chehov.equals(block));
+        System.out.println(book4.getYearOfPublication()==(book3.getYearOfPublication()));
+
+
+
+
     }
 }
